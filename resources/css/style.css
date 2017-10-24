@@ -1,5 +1,5 @@
 html {
-  font-size: 16px;
+  font-size: 18px;
 }
 /* Header Code */
 .header {
@@ -11,10 +11,13 @@ html {
 }
 .header h1 {
   font-family: Helvetica;
-  font-size: 1.75rem;
+  font-size: 1rem;
   color: white;
-  padding-left: 20px;
+  padding: 0.66rem 0rem 0.66rem 1rem;
   font-weight: lighter;
+}
+.header img {
+  height: 1.5rem;
 }
 /*Main Banner*/
 .main {
@@ -22,11 +25,11 @@ html {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  height: 600px;
-
+  height: 25rem;
 }
 .main-text {
   display: inline-flex;
@@ -37,42 +40,51 @@ html {
 
   font-family: Helvetica;
   color: white;
-  height: 150px;
-  width: 325px;
+  width: 25rem;
+  height: auto;
   background-color: black;
   margin-left: 150px;
   padding: 20px 20px;
 }
 .main-text h1 {
   font-size: 2rem;
-  font-weight: lighter;
-  padding: 10px;
+  font-weight: bold;
+  margin-top: 0.25rem;
+  margin-left: 3rem;
+  margin-bottom: 2rem;
 }
 .main-text p {
-  padding: 10px;
+  margin-top: 2em;
+  margin-left: 3rem;
+  font-size: 1rem;
   font-weight: lighter;
 }
 /* Nav Bar*/
 .menu {
-  background-color: red;
+  background-color: firebrick;
   height: 25px;
   padding: 20px;
 
   display: flex;
+  /*
   justify-content: center;
-  align-content: space-between;
+  */
+  justify-content: space-around;
+  align-content: space-around;
   margin-bottom: 50px;
 }
 nav span {
   display: inline-flex;
 
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   color: white;
   font-family: Helvetica;
   font-weight: lighter;
-  text-decoration: underline;
-
-  padding: 0px 35px 0px 35px;
+  padding-left: 1.9rem;
+  padding-right: 1.9rem;
+}
+nav .item-menu {
+  display: none;
 }
 /* Gadget Section */
 .gadgets {
@@ -81,21 +93,24 @@ nav span {
   align-content: space-between;
 }
 .gadget-box img {
+
   max-width: 250px;
-  height: auto;
+  height: 9rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
 .gadget-box  {
   display: inline-flex;
   flex-flow: wrap;
   justify-content: center;
-  align-items: flex-end;
 
-  width: 300px;
-  height: 300px;
 
-  margin: 30px;
-  border: 3px solid black;
+  width: 30%;
+  height: auto;
+
+  margin: 3rem;
+  border: 4px solid black;
 }
 .gadget-box .label {
   background-color: black;
@@ -115,28 +130,112 @@ nav span {
 .info {
   display: flex;
   justify-content: space-around;
-  flex-flow: wrap;
-  margin: 150px;
+  flex-flow: row;
+  margin-top: 3rem;
+  margin-bottom: 4rem;
   font-size: 1.25rem;
   font-family: Helvetica;
+
 }
 .info h1 {
   background-color: black;
   color: white;
-  padding: 15px;
+  padding: 1.5rem;
   width: 300px;
 }
-/* Footer */
 .info p {
   padding-top: .90rem;
 }
+/* Footer */
 footer {
   background-color: black;
-  padding: 10rem;
+  padding: 5rem;
 
   font-family: Helvetica;
   font-size: 1.5rem;
   color: white;
   font-weight: lighter;
   text-align: center;
+}
+/*Screen Adjustment*/
+@media only screen and (max-width: 1024px) {
+  html {
+    width: 100%;
+  }
+  .header {
+    padding-left: .5rem;
+  }
+  .main-text {
+    margin-left: 0rem;
+  }
+  .main-text h1 {
+    font-size: 1.5rem;
+  }
+  .main-text p {
+    font-size: .75rem;
+  }
+  nav span {
+    display: none;
+  }
+  nav .item-menu {
+    display: initial;
+  }
+  #shades {
+    display: none;
+  }
+  .gadgets {
+    justify-content: space-between;
+  }
+  .gadget-box {
+    width: 47%;
+    margin: 0;
+  }
+  .info {
+    justify-content: space-between;
+  }
+}
+@media only screen and (max-width: 470px) {
+  .main {
+    height: 15rem;
+  }
+  .main-text {
+    margin-top: 10rem;
+    height: 2rem;
+  }
+  .main-text p {
+    font-size: 0.77rem;
+    margin-top: 1rem;
+    margin-left: 2rem;
+  }
+  .main-text h1 {
+    font-size: 1rem;
+    margin-left: 2rem;
+  }
+  #watch {
+    display: none;
+  }
+  .gadgets {
+    justify-content: center;
+  }
+  .gadget-box {
+    width: 90%;
+    justify-content: center;
+  }
+  .gadget-box .label {
+    font-size: 1.25rem;
+  }
+  .info {
+    flex-wrap: wrap;
+    justify-content:center;
+    font-size: 1rem;
+  }
+  .info h1 {
+    width: 375px;
+  }
+  .info-hours {
+    margin-top: 1rem;
+  }
+  footer {
+    font-size: .75rem;
+  }
 }
